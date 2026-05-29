@@ -90,26 +90,29 @@
     }
 
     .birthday-title{
-      font-size:60px;
-      color:white;
-      font-weight:bold;
-      animation:pop 1s ease;
-      text-shadow:0 0 20px rgba(255,255,255,0.8);
-      z-index:2;
-    }
+  font-size: clamp(32px, 9vw, 60px);
+  color:white;
+  font-weight:bold;
+  animation:pop 1s ease;
+  text-shadow:0 0 20px rgba(255,255,255,0.8);
+  z-index:2;
+  text-align:center;
+  line-height:1.2;
+  padding:0 15px;
+}
+    
 
     .photo{
-      width:250px;
-      height:250px;
-      object-fit:cover;
-      border-radius:25px;
-      border:6px solid white;
-      margin-top:30px;
-      animation:pop 1.5s ease;
-      z-index:2;
-      box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    }
-
+  width:min(250px, 75vw);
+  height:min(250px, 75vw);
+  object-fit:cover;
+  border-radius:25px;
+  border:6px solid white;
+  margin-top:25px;
+  animation:pop 1.5s ease;
+  z-index:2;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
     .message{
       margin-top:20px;
       color:white;
@@ -144,6 +147,19 @@
         transform:translateY(110vh) rotate(720deg);
       }
     }
+    @media(max-width:600px){
+
+  .birthday-page{
+    padding:25px 15px;
+  }
+
+  .message{
+    font-size:18px;
+    line-height:1.5;
+    padding:0 10px;
+  }
+
+}
 
   </style>
 </head>
